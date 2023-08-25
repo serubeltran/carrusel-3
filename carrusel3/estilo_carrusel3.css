@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./media/images/fondo6.jpg);
+    background-size:cover;
+}
+
+h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-family: calibri;
+    color: aqua;
+    text-align:center;
+    text-shadow: 5px 2px 10px white;
+}
+.content{
+    width: 100%;
+    perspective: 1500px;
+}
+
+.content-carrusel{
+    width: 100%;
+    position: absolute;
+    animation: rotar 10s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.content-carrusel figure{
+    width: 200px;
+    height: 100%;
+    position:absolute;
+
+}
+
+.content-carrusel figure:nth-child(1){transform: rotateY(60deg) translateZ(300px);}
+.content-carrusel figure:nth-child(2){transform: rotateY(120deg) translateZ(300px);}
+.content-carrusel figure:nth-child(3){transform: rotateY(180deg) translateZ(300px);}
+.content-carrusel figure:nth-child(4){transform: rotateY(240deg) translateZ(300px);}
+.content-carrusel figure:nth-child(5){transform: rotateY(300deg) translateZ(300px);}
+.content-carrusel figure:nth-child(6){transform: rotateY(360deg) translateZ(300px);}
+
+.content-carrusel img{
+    width: 100%;
+}
+
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    } to {
+        transform: rotateY(360deg);
+    }
+}
